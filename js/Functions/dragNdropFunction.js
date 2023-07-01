@@ -34,7 +34,7 @@ const dragNdropFunction = () => {
     }
 
     const itemsArr = [...document.querySelectorAll('.card')];
-
+    
     const dragIndex = itemsArr.indexOf(draggingElem);
     const dropIndex = itemsArr.indexOf(dropElem);
 

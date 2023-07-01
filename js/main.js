@@ -13,6 +13,7 @@ import textHiddenFunction from "./Functions/textHiddenFunction.js";
 import filterCard from "./API/filterCard.js";
 import debounce from "./Functions/debounce.js";
 import selectFilterCard from "./API/selectFilterCard.js";
+import dragNdropFunction from "./Functions/dragNdropFunction.js";
 
 const loginBtn = document.querySelector("#loginButton");
 
@@ -20,6 +21,7 @@ renderElements();
 checkLoginToken();
 logOutFunction();
 textHiddenFunction()
+document.querySelector('.no-items').classList.remove('hidden');
 
 loginBtn.addEventListener('click', () => {
   const form = new LoginForm('Вхід');
@@ -59,6 +61,7 @@ addVisit.addEventListener('click', () => {
     const body = form.getAllUserInfo();
     const { data } = await postElement(body);
     closerCallbackFromModal()
+    dragNdropFunction()
 
     new DashBoardCard(data.doctor, data["full_name"], data.id, data, editModalFunction, textHiddenFunction).render()
     textHiddenFunction()
