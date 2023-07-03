@@ -1,6 +1,6 @@
 import LoginModal from "./Classes/loginModal.js";
 import LoginForm from "./Classes/loginForm.js";
-import loginFunction from "./API/loginfunction.js";
+import loginFunction from "./API/loginFunction.js";
 import checkLoginToken from "./Functions/checkLoginToken.js";
 import CreateVisitForm from "./Classes/CreateVisitForm.js";
 import postElement from "./API/postElement.js";
